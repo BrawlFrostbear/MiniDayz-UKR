@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="MiniDayz+" content="width=device-width, initial-scale=1.0">
+    <title>MiniDayZ+</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ada5a5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 100px 20px 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+
+        .screenshots {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .screenshots img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .screenshots img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image347.png" alt="Логотип">
+    </header>
+
+    <div class="content">
+        <p>Завантажити переклад для гри MiniDayZ+.</p>
+        <a href="https://drive.google.com/file/d/1-2oWcKA6MHfzl1mNRoUNCPilWqE9ZtZH/view" class="download-button">Завантажити</a>
+
+        <div class="screenshots">
+            <img src="Screenshot_2024-06-06-23-11-20-64_7cddbfc8db5ee81bf1e322b2f07e1160.jpg" alt="Скриншот 1" onclick="openModal(this.src)">
+            <img src="Screenshot_2024-06-07-18-19-31-91_7cddbfc8db5ee81bf1e322b2f07e1160.jpg" alt="Скриншот 2" onclick="openModal(this.src)">
+            <img src="Screenshot_2024-06-04-21-09-28-72_7cddbfc8db5ee81bf1e322b2f07e1160.jpg" alt="Скриншот 3" onclick="openModal(this.src)">
+        </div>
+    </div>
+    <div class="footer-links">
+        <a href="https://discord.gg/2mpzxwxTwP" target="_blank">
+            <img src="Dd.jpg" alt="Приєднатися до нашого Discord">
+        </a>
+    </div>
+    <h1> ⬇️Новина⬇️</h1>
+    <h4>(1.5.3)2️⃣?</h4>
+    <h4>(1.5.3) 1️⃣ (Перша версія мода )</h4>
+    <footer>
+        <p>&copy; 2023-2024 Переклад для MiniDayZ+ (творець:brawlfrostbears)  
+        </p>
+        
+
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modal-image">
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
