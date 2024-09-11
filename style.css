@@ -6,8 +6,11 @@
     <title>MiniDayZ+</title>
     <style>
         body {
+		background-image: url('Фон.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-            background-color: #ada5a5;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -112,7 +115,7 @@
     </header>
 
     <div class="content">
-        <p>Завантажити переклад для гри MiniDayZ+.</p>
+        <p style="color: #F0F8FF;">Завантажити переклад для гри MiniDayZ+.</p>
         <a href="https://drive.google.com/file/d/1-2oWcKA6MHfzl1mNRoUNCPilWqE9ZtZH/view" class="download-button">Завантажити</a>
 
         <div class="screenshots">
@@ -126,12 +129,35 @@
             <img src="Dd.jpg" alt="Приєднатися до нашого Discord">
         </a>
     </div>
-    <h1> ⬇️Новина⬇️</h1>
-    <h4>(1.5.3)2️⃣?</h4>
-    <h4>(1.5.3) 1️⃣ (Перша версія мода )</h4>
+	
+	<div class="footer-links">
+        <a href="https://www.youtube.com/@brawl_frostbear" target="_blank">
+            <img src="YT.png" alt="Приєднатися до нашого Youtube">
+        </a>
+    </div>
     <footer>
-        <p>&copy; 2023-2024 Переклад для MiniDayZ+ (творець:brawlfrostbears)  
-        </p>
+         <p class="changing-text">&copy; 2023-2024 Переклад для MiniDayZ+ (творець: brawlfrostbears)</p>
+
+    <script>
+        // Массив кольорів
+        const colors = ["#007FFF", "#007FFF", "#007FFF", "#FFBF00", "#FFBF00"];
+        let currentColorIndex = 0;
+
+        // Знайти елемент за класом
+        const textElement = document.querySelector('.changing-text');
+
+        // Функція для зміни кольору
+        function changeColor() {
+            // Змінити колір тексту
+            textElement.style.color = colors[currentColorIndex];
+            // Переходити до наступного кольору в масиві
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        // Запуск функції зміни кольору кожну секунду
+        setInterval(changeColor, 100);
+    </script>
+</body>
         
 
     <div class="modal" id="image-modal" onclick="closeModal()">
