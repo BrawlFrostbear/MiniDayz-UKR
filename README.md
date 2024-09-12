@@ -1,6 +1,8 @@
 # MiniDayz-UKR
 ![My Image](image347.png)
 
+https://brawl82.github.io/MiniDayz-UKR/
+
 <div class="footer-links">
         <a href="https://discord.gg/2mpzxwxTwP" target="_blank">
             <img src="Dd.jpg" alt="Приєднатися до нашого Discord">
