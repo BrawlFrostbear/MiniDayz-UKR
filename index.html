@@ -1,14 +1,11 @@
-<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="MiniDayz+" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniDayZ+</title>
-   <div class="container">
-   </div>
    <style>
         body {
-		background-image: url('Фон.gif');
+            background-image: url('Фон.gif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -16,7 +13,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-			 height: 100vh;
+            height: 100vh;
         }
 
         header {
@@ -84,6 +81,13 @@
             width: 100%;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -110,6 +114,37 @@
             color: #fff;
             cursor: pointer;
         }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 70px 10px 10px;
+            }
+
+            .download-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .screenshots img {
+                width: 150px;
+            }
+
+            footer {
+                padding: 5px 0;
+            }
+
+            .modal img {
+                max-width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -127,19 +162,25 @@
             <img src="Screenshot_2024-06-04-21-09-28-72_7cddbfc8db5ee81bf1e322b2f07e1160.jpg" alt="Скриншот 3" onclick="openModal(this.src)">
         </div>
     </div>
+
     <div class="footer-links">
         <a href="https://discord.gg/2mpzxwxTwP" target="_blank">
             <img src="Dd.jpg" alt="Приєднатися до нашого Discord">
         </a>
-    </div>
-	
-	<div class="footer-links">
+
         <a href="https://www.youtube.com/@brawl_frostbear" target="_blank">
             <img src="YT.png" alt="Приєднатися до нашого Youtube">
         </a>
     </div>
+
     <footer>
          <p class="changing-text">&copy; 2023-2024 Переклад для MiniDayZ+ (творець: brawlfrostbears)</p>
+    </footer>
+
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modal-image">
+    </div>
 
     <script>
         // Массив кольорів
@@ -159,16 +200,7 @@
 
         // Запуск функції зміни кольору кожну секунду
         setInterval(changeColor, 100);
-    </script>
-</body>
-        
 
-    <div class="modal" id="image-modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img id="modal-image">
-    </div>
-
-    <script>
         function openModal(src) {
             const modal = document.getElementById('image-modal');
             const modalImg = document.getElementById('modal-image');
